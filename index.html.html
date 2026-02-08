@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentine Invitation 💌</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 32px 40px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+      max-width: 360px;
+      animation: pop 0.8s ease;
+    }
+
+    h1 {
+      color: #e63946;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 22px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 22px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 6px;
+    }
+
+    .yes {
+      background: #e63946;
+      color: white;
+    }
+
+    .yes:hover {
+      background: #d62828;
+    }
+
+    .ofcourse {
+      background: #f1faee;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+
+    .maybe {
+      background: #ffe8a1;
+      color: #333;
+      border: 1px solid #e0c97f;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <h1>Hi Faith 💕</h1>
+    <p>
+    I KNOW THAT THIS IS SUPER RANDOM<br>
+    BUT CAN WE GET TO KNOW EACH OTHER AGAIN<br>
+    pls dont be mad <br>
+      <br><br>
+      Can I take you out on a date this coming Valentine’s
+      <br><br>
+      — Gabi
+    </p>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 💖</button>
+      <button class="maybe" onclick="sayMaybe()">Maybe 🤔</button>
+    </div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("card").innerHTML = `
+        <h1>YAY!!!!!!</h1>
+        <p>
+          You just made Gab<br>
+          super happy 🥰<br><br>
+          Can’t wait to spend<br>
+          Valentine’s Day with you 
+          please do message me💌
+        </p>
+      `;
+    }
+
+    function sayMaybe() {
+      document.getElementById("card").innerHTML = `
+        <h1>That’s okay 😊</h1>
+        <p>
+          oke pls do message me<br>
+          whatever the answer is 💬💖
+        </p>
+      `;
+    }
+  </script>
+</body>
+</html>
