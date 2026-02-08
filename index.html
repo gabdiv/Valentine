@@ -57,16 +57,16 @@
       background: #d62828;
     }
 
-    .ofcourse {
-      background: #f1faee;
-      color: #333;
-      border: 1px solid #ccc;
-    }
-
     .maybe {
       background: #ffe8a1;
       color: #333;
       border: 1px solid #e0c97f;
+    }
+
+    .no {
+      background: #e5e5e5;
+      color: #333;
+      border: 1px solid #bbb;
     }
 
     @keyframes pop {
@@ -79,11 +79,10 @@
   <div class="card" id="card">
     <h1>Hi Faith 💕</h1>
     <p>
-    I KNOW THAT THIS IS SUPER RANDOM<br>
-    BUT CAN WE GET TO KNOW EACH OTHER AGAIN<br>
-    pls dont be mad <br>
-      <br><br>
-      Can I take you out on a date this coming Valentine’s
+      I KNOW THAT THIS IS SUPER RANDOM<br>
+      BUT CAN WE GET TO KNOW EACH OTHER AGAIN<br>
+      pls dont be mad <br><br>
+      Can I take you out on a date this coming Valentine’s?
       <br><br>
       — Gabi
     </p>
@@ -91,18 +90,19 @@
     <div class="buttons">
       <button class="yes" onclick="sayYes()">Yes 💖</button>
       <button class="maybe" onclick="sayMaybe()">Maybe 🤔</button>
+      <button class="no" onclick="sayNo()">No 💙</button>
     </div>
   </div>
 
   <script>
     function sayYes() {
       document.getElementById("card").innerHTML = `
-        <h1>YAY!!!!!!</h1>
+        <h1>YAY!!!!!! 💘</h1>
         <p>
-          You just made Gab<br>
+          You just made Gabi<br>
           super happy 🥰<br><br>
-          See you!
-          please do message me💌
+
+          take a SS then send it to me hehe
         </p>
       `;
     }
@@ -116,10 +116,21 @@
         </p>
       `;
     }
+
+    function sayNo() {
+      document.getElementById("card").innerHTML = `
+        <h1>It’s okay 💙</h1>
+        <p>
+          Thank you!.<br><br>
+          I appreciate you,<br>
+          and ingat ka lagi 🌷
+        </p>
+      `;
+    }
   </script>
 </body>
-
 </html>
+
 
 
 
