@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Valentine Invitation 💌</title>
+
   <style>
     body {
       margin: 0;
@@ -12,49 +13,83 @@
       align-items: center;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    /* floating hearts */
+    .heart {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 20px;
+      animation: float 8s infinite linear;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 1;
+      }
     }
 
     .card {
+      position: relative;
       background: white;
-      padding: 32px 40px;
-      border-radius: 22px;
+      padding: 34px 42px;
+      border-radius: 24px;
       text-align: center;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-      max-width: 360px;
+      max-width: 370px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
       animation: pop 0.8s ease;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #e63946, #ffb4c6);
+      z-index: -1;
     }
 
     h1 {
       color: #e63946;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     p {
       font-size: 16px;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .buttons {
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 10px 22px;
       border: none;
       border-radius: 22px;
       font-size: 14px;
       cursor: pointer;
       margin: 6px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
 
     .yes {
       background: #e63946;
       color: white;
-    }
-
-    .yes:hover {
-      background: #d62828;
     }
 
     .maybe {
@@ -75,14 +110,25 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- floating hearts -->
+  <div class="heart" style="left:10%; animation-delay:0s;">💗</div>
+  <div class="heart" style="left:30%; animation-delay:2s;">💖</div>
+  <div class="heart" style="left:50%; animation-delay:4s;">💕</div>
+  <div class="heart" style="left:70%; animation-delay:1s;">💘</div>
+  <div class="heart" style="left:90%; animation-delay:3s;">💓</div>
+
   <div class="card" id="card">
     <h1>Hi Faith 💕</h1>
     <p>
-      I KNOW THAT THIS IS SUPER RANDOM<br>
-      BUT CAN WE GET TO KNOW EACH OTHER AGAIN<br>
-      pls dont be mad <br><br>
-      Can I take you out on a date this coming Valentine’s?
+      This might surprise you but<br>
+      can we get to know each other again?<br>
+      pls dont be mad<br><br>
+
+      Can I take you out on a date this coming 
+      Valentine’s or when you're free?
       <br><br>
       — Gabi
     </p>
@@ -101,8 +147,7 @@
         <p>
           You just made Gabi<br>
           super happy 🥰<br><br>
-
-          take a SS then send it to me hehe
+          take a SS then send it to me hehe 📸💖
         </p>
       `;
     }
@@ -121,7 +166,7 @@
       document.getElementById("card").innerHTML = `
         <h1>It’s okay 💙</h1>
         <p>
-          Thank you!.<br><br>
+          Thank you!<br><br>
           I appreciate you,<br>
           and ingat ka lagi 🌷
         </p>
